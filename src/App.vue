@@ -1,11 +1,21 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link> |
-    <router-link to="/post-a-job">Post A Job</router-link> |
-  </nav>
-  <router-view/>
+    <Header/>
+    <router-view/>
+    <Footer/>
 </template>
+
+<script>
+import Footer from '@/components/Footer.vue';
+import Header from '@/components/Header.vue';
+
+export default {
+  name: 'App',
+  components: {
+    Footer,
+    Header
+  }
+};
+</script>
 
 <style>
 #app {
